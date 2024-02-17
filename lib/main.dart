@@ -1,5 +1,7 @@
+import 'package:data_table/screen/table.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
+
 List<List> item = [
   [
     1,
@@ -34,12 +36,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home:  Table(),
-    );
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home: DataTableFlutter(columns: [
+          'Name',
+          'Age'
+        ], rows: [
+          [
+            'Abdulloh',
+            '22',
+          ]
+        ]));
   }
 }
